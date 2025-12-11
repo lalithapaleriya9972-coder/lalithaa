@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: "C:\Users\shalu\Pictures\Screenshots\Screenshot 2025-12-10 194027.png";
+            background-size: auto;
+            background-repeat: repeat;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: medium;
+            border-radius: 10%;
+            height:1000px;
+            width:500px;
+            margin: 5px;
+            padding: 5px;
+            border-color: whitesmoke ;
+            text-align: center;
+            box-shadow: 0px 0px 20px ghostwhite;
+            align-items: center;
+            
+        }
+       
+    </style>
+
+</head>
+<body>
+    <div class="box">
+        <h1>EXAM PREDICTOR</h1>
+        <h2>ENTER YOUR NAME</h2>
+        <input type="text" id="name"><br>
+        <button onclick="exam()">check Result</button>
+        <p id="result"></p>
+        
+    </div>
+    
+    <script>
+        function exam(){
+            var name=document.getElementById("name").value;
+            var marks=Math.floor(Math.random()*101);
+            var resultText="";
+            var resultClass="";
+            if(marks<35){
+            resultText=name+"has failed in the exam";
+            resultClass="fail";
+            }
+            else{
+                resultClass="pass";
+             if(marks>80){
+                resultText=name+"passed with distinction";
+            }
+            else if(marks>=75){
+                resultText=name+"passed with first class";
+            }
+            else if (marks>=50){
+                resultText=name+"passed with second class";
+            }
+            else{
+                resultText=name+"passed(just pass)";
+            }
+        }
+        var resultPara=document.getElementById("result");
+        resultPara.innerHTML=resultText;
+        resultPara.className=resultClass;
+    }
+    </script>
+</body>
+</html>

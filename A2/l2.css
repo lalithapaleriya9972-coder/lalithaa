@@ -1,0 +1,32 @@
+#box1{
+    height:100px;
+    width:100px;
+    border:2px solid black;
+    padding:5px;
+    margin:5px;
+    background-color: brown;
+}
+#box2{
+    height:100px;
+    width:100px;
+    border:2px solid black;
+    padding:5px;
+    margin:5px;
+    background-color: blueviolet;
+}
+#box3{
+    height:100px;
+    width:100px;
+    border:2px solid black;
+    padding:5px;
+    margin:5px;
+    background-color: aqua;
+}
+.container{
+    display: flex;
+    flex-direction: center;
+}
+#box1:hover{
+    background-color: blueviolet;
+    border-radius: 30%;
+}

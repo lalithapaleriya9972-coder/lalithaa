@@ -1,0 +1,46 @@
+#box1{
+    height: 100px;
+    width:100px;
+    border: 2px solid black;
+    padding:5px;
+    margin:5px;
+    background-color: red;
+    float:left;
+    border-radius: 50%;
+    position:fixed;
+}
+#box2{
+    height: 100px;
+    width:100px;
+    border: 2px solid black;
+    padding:5px;
+    margin:5px;
+    background-color:yellow;
+    float: left;
+}
+#box3{
+    height: 100px;
+    width:100px;
+    border: 2px solid black;
+    padding:5px;
+    margin:5px;
+    background-color:green;
+    float: left;
+    
+}
+#div1{
+    height:100px;
+    width:100px;
+    border:2px solid black;
+}
+#div2{
+    height:100px;
+    width:100px;
+    border:2px solid black;
+}
+#box1:hover{
+    background-color: blueviolet;
+    border-radius: 20%;
+    box-shadow: 0px 0px 20px red;
+}
+

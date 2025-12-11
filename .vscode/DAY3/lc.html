@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Calculator 💘</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            transition: 0.4s ease-in-out;
+            margin: 0;
+        }
+
+        .overlay {
+            background: rgba(255, 255, 255, 0.82);
+            width: 420px;
+            margin: auto;
+            margin-top: 70px;
+            padding: 28px;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.25);
+            text-align: center;
+        }
+
+        h2 {
+            color: #c40056;
+            margin-bottom: 15px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 7px 0;
+            border-radius: 8px;
+            border: 1px solid #777;
+            font-size: 15px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #ff0066;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            margin-top: 12px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background: #cc0052;
+        }
+
+        .upload-box input {
+            border: none;
+        }
+
+        .result {
+            font-size: 22px;
+            margin-top: 20px;
+            font-weight: bold;
+            color: #b3003b;
+        }
+
+        .heart {
+            font-size: 30px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+<div class="overlay">
+    <h2>💘 Love Calculator 💘</h2>
+
+    <div class="upload-box">
+        <label><b>Upload Background Image:</b></label><br><br>
+        <input type="file" id="bg" accept="image/*">
+    </div>
+
+    <input type="text" id="name1" placeholder="Your Name">
+    <input type="text" id="name2" placeholder="Partner Name">
+
+    <button onclick="calculateLove()">Calculate Love 💗</button>
+
+    <div class="result" id="output"></div>
+</div>
+
+<script>
+    // Background upload
+    document.getElementById("bg").addEventListener("change", function () {
+        const img = this.files[0];
+        if (img) {
+            const url = URL.createObjectURL(img);
+            document.body.style.backgroundImage = `url(${url})`;
+        }
+    });
+
+    function calculateLove() {
+        let name1 = document.getElementById("name1").value.trim();
+        let name2 = document.getElementById("name2").value.trim();
+
+        if (name1 === "" || name2 === "") {
+            document.getElementById("output").innerHTML = "⚠️ Please enter both names!";
+            return;
+        }
+
+        // Fun love calculation percentage
+        let percentage = Math.floor(Math.random() * 51) + 50; // Generates between 50 - 100%
+
+        let msg = "";
+
+        if (percentage > 90) msg = "💞 Perfect Soulmates 💞";
+        else if (percentage > 80) msg = "💗 True Love Forever 💗";
+        else if (percentage > 70) msg = "😍 Beautiful Connection 😍";
+        else if (percentage > 60) msg = "😊 Good Match 😊";
+        else msg = "🙂 Needs More Understanding 🙂";
+
+        document.getElementById("output").innerHTML = `
+            <div class="heart">❤️ ${percentage}% ❤️</div>
+            ${msg}
+        `;
+    }
+</script>
+
+</body>
+</html>

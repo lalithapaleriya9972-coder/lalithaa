@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <div class="box">
+        <h2>LOVE CALCULATOR❤️</h2>
+        <h3>partner1</h3>
+        <input type="text" id="partner1"><br>
+        <h3>partner2</h3>
+        <input type="text" id="partner2"><br>
+        <button onclick="love()">Check Result</button>
+        <p id="result"></p>
+    </div>  
+</head>
+<body>
+    <script>
+         function love(){
+            
+         var partner1 =document.getElementById("partner1").value;
+         var partner2 =document.getElementById("partner2").value;
+            var marks=Math.floor(Math.random()*101);
+            var resultText="";
+            var resultClass="";
+            if(marks<35){
+            resultText=partner1+"💔"+partner2+"Don't try!!❌, no chance of love";
+            resultClass="fail";
+            }
+            else{
+                resultClass="pass";
+             if(marks>80){
+                resultText=partner1+"💕"+partner2+"will stay as couple forever🫂❤️";
+                
+            }
+            else if(marks>=75){
+                resultText=partner1+"💕"+partner2+ "true love, made for each other";
+            }
+            else if (marks>=50){
+                resultText=partner1+"💌"+partner2+ "need more effortsand understanding";
+            }
+            else{
+                resultText=partner1+"😊"+partner2+ "its just an affection!!";
+            }
+        }
+         document.getElementById("result").innerHTML=resultText;
+    }
+        </script>
+        <style>
+            body{
+                margin: 2px;
+                padding:30px;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                align-items: flex-start;
+                background-image:url(https://images.unsplash.com/photo-1535615615570-3b839f4359be?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            .box{
+                width:500px;
+                height:500px;
+                border-radius: 20px;
+                backdrop-filter: blur(5px);
+                border: 1px solid black;
+                align-items: top;
+                justify-content: left;
+                text-align: center;
+                color: gold;
+            }
+        </style>
+
+
+
+
+           
+            
+    
+</body>
+</html>

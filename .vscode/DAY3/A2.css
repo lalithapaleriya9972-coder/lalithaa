@@ -1,0 +1,14 @@
+body{
+    height: 100vh;
+    width: 500px;
+    margin: 2px;
+    padding: 2px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8dYTfm8aPOOVFoE5mSmLpDG9VoVi2VE8SuA&s);
+    background-position: center;
+    background-repeat: no-repeat;
+    
+
+}
