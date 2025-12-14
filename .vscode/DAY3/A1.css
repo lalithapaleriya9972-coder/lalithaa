@@ -1,13 +1,24 @@
 #box1{
-    height: 500px;
-    width: 250px;
+    height: 750px;
+    width: 1250px;
     border: 5px solid black;
     padding: 2px;
     margin: 2px;
     background-color: bisque;
+    background: url(https://www.sirmvit.edu/wp-content/uploads/2018/11/Sirmvit-About-Header-img-500x350.jpg);
+    background-position: center;
 }
 img{
     border-radius: 50%;
     height: 100px;
     width: 100px;
+    position: center;
 }
+.a{
+    font-size: large;
+   font-style: oblique;
+   font-size: 10px;
+
+}
+
+
